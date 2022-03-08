@@ -6,7 +6,7 @@
 Plugin Name: JWT Auth Whitelist
 Plugin URI: https://wpmore.cn/jwt-auth-whitelist.html
 Description: If you’re adding the filter inside theme and the it doesn’t work, please create a small 1 file plugin and add your filter there. It should fix the issue.
-Version: 1.0.0
+Version: 1.0.1
 Author: 更好的WordPress主题
 Author URI: https://wpmore.cn/
 License: GPLv2 or later
@@ -42,6 +42,15 @@ add_filter(
 			'/wp-json/yoast/v1/prominent_words/complete',
 			'/wp-json/yoast/v1/workouts?_locale=user',
 			'/wp-json/yoast/v1/workouts/cornerstone_data?_locale=user',
+			'/wp-json/yoast/v1/indexing/prepare',
+			'/wp-json/yoast/v1/indexing/terms',
+			'/wp-json/yoast/v1/indexing/posts',
+			'/wp-json/yoast/v1/indexing/post-type-archives',
+			'/wp-json/yoast/v1/indexing/general',
+			'/wp-json/yoast/v1/indexing/indexables-complete',
+			'/wp-json/yoast/v1/link-indexing/posts',
+			'/wp-json/yoast/v1/link-indexing/terms',
+			'/wp-json/yoast/v1/indexing/complete',
 		);
 
 		foreach ( $whitelists as $whitelist ) {
